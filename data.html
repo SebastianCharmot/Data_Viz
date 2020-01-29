@@ -1,0 +1,84 @@
+<!--
+Sebastian Charmot
+-->
+<body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  
+    <!-- Set up basic webpage structure -->
+    <div id="header"></div>
+    <div id="nominal"></div>
+    <div id="ordinal"></div>
+    <div id="interval"></div>
+    <div id="ratio"></div>
+  
+    <style>
+      /* //make changes here */
+      .red {
+          color: white;
+          background-color: #990000;
+          /* border-color: #377eb8;
+          border-width: 20px; */
+      }
+      .green {
+          color: #004d00;
+          background-color: #ffccff;
+      }
+      .blue {
+          color: white;
+          background-color: #377eb8;
+      }
+      .purple {
+          color: #984ea3;
+          background-color: #e6ffb3;
+      }
+      .title {
+        text-decoration: underline;
+        text-align: center;
+      }
+    </style>
+  
+    <script>
+        const header = d3.select("#header")
+            .html("<h1> Guide to the Four Measurement Scales </h1>")
+            .attr("class", 'title')
+            
+        const nominal = d3.select("#nominal")
+            .append("li")
+            .text("Nominal")
+            .attr("class","red")
+            .append("p")
+            .text("A nominal data type is for data that serves as a label and has no quantitative value")
+            .append("p")
+            .text("An example of nominal data would be hair color")
+
+        const ordinal = d3.select("#ordinal")
+            .append("li")
+            .text("Ordinal")
+            .attr("class","purple")
+            .append("p")
+            .text("A nominal data type is for data that has a significant order where the differences between the orders are not significant")
+            .append("p")
+            .text("An example of ordinal data would be the Likert scale which is a rating system that has seven choices between strongly disagree and strongly agree")
+
+        const interval = d3.select("#interval")
+            .append("li")
+            .text("Interval")
+            .attr("class","blue")
+            .append("p")
+            .text("An interval data type is for data that lies within an interval scale that has no true zero.")
+            .append("p")
+            .text("An example of interval data would be degrees Fahrenheit.")
+        
+        const ratio = d3.select("#ratio")
+            .append("li")
+            .text("Ratio")
+            .attr("class","green")
+            .append("p")
+            .text("The ratio data type is for data that has contains information about the difference between its units and does have an absolute zero.")
+            .append("p")
+            .text("An example of ratio data would be a person's height.")
+
+    </script>
+  
+  </body>
+  
